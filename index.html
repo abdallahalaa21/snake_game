@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Snake game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        background: #222831;
+        flex-direction: column;
+      }
+      div {
+        text-align: left;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      h1 {
+        color: #ffffff;
+        font-size: 30px;
+      }
+      button {
+        height: 50px;
+        background: transparent;
+        color: #ff971d;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      button:hover {
+        text-decoration: underline;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Score: <span id="score"></span></h1>
+      <button onclick="initialState()">New game</button>
+    </div>
+    <canvas
+      height="500"
+      width="500"
+      id="gamePlay"
+      style=" background: #393e46;"
+    ></canvas>
+  </body>
+  <script src="index.js"></script>
+</html>
