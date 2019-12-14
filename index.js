@@ -12,6 +12,8 @@ const scale = 10;
 ctx.scale(scale, scale);
 let dir, fruit, snake, totalScore;
 let x1, y1, x2, y2;
+const failAudio = new Audio("./assets/fail.mp3");
+const eatingAudio = new Audio("./assets/eat.mp3");
 
 const directions = {
   down: { x: 0, y: 1 },
@@ -126,6 +128,7 @@ const makeFruit = () => {
 
 const eating = () => {
   if (snake[0].x === fruit.x && snake[0].y === fruit.y) {
+    eatingAudio.play();
     makeFruit();
     totalScore++;
     scoreEle.innerText = totalScore;
@@ -138,6 +141,7 @@ const eating = () => {
 const checkDied = () => {
   for (let i = 3; i < snake.length; i++) {
     if (snake[0].x === snake[i].x && snake[0].y === snake[i].y) {
+      failAudio.play();
       alert("dieeed");
       initialState();
     }
