@@ -4,7 +4,7 @@ if (innerWidth < 500) {
   canvas.width = window.screen.width - 10;
 }
 
-if (innerHeight < 500) {
+if (innerHeight < 600) {
   canvas.height = window.screen.height - 100;
 }
 const ctx = canvas.getContext("2d");
